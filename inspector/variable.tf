@@ -54,3 +54,10 @@ variable "initialize_delegated_admin_account" {
   default     = false
   description = "Enable delegated admin accounts"
 }
+
+variable "aws_inspector_2_enable" {
+  type        = bool
+  default     = false
+  description = "Enable Inspector2 for this account"
+}
+
