@@ -6,7 +6,7 @@ resource "aws_inspector2_delegated_admin_account" "admin_account" {
 }
 
 resource "aws_inspector2_enabler" "enable_inspector_admin_account" {
-  count          = var.enable_delegated_admin_account ? 1 : 0
+  count          = var.aws_inspector_2_enable ? 1 : 0
   account_ids    = [data.aws_caller_identity.calling_account.account_id]
   resource_types = var.enabled_resources_admin_account
 }
